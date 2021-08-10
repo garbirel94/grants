@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.garbirel.jetpack.ui.fragment.login.LoginRegisterViewModel" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+
+        <variable
+            name="click"
+            type="com.garbirel.jetpack.ui.fragment.login.RegisterFragment.ProxyClick" />
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_toolbar" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="60dp"
+            android:hint="帐号"
+            android:text="@{viewModel.userName}"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext_shape" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:hint="密码"
+            android:text="@{viewModel.password}"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext_shape" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:hint="确认密码"
+            android:text="@{viewModel.password2}"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittext_shape" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:onClick="@{()-> click.register()}"
+            android:background="@drawable/button_shape"
+            android:text="注册并登陆"/>
+    </LinearLayout>
+</layout>

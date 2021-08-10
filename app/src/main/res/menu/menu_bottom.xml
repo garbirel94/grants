@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="首页" android:checked="true" android:id="@+id/menu_home" android:icon="@drawable/menu_main"/>
+    <item android:title="书架" android:id="@+id/menu_bookshelf" android:icon="@drawable/menu_project"/>
+    <item android:title="我的" android:id="@+id/menu_account" android:icon="@drawable/menu_me"/>
+</menu>
